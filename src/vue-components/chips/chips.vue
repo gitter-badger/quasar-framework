@@ -6,11 +6,11 @@
   >
     <span
       class="chip label bg-light text-grey-9"
-      v-for="label in model"
+      v-for="(label, index) in model"
       track-by="$index"
     >
       {{ label }}
-      <i class="on-right" @click="remove($index)">close</i>
+      <i class="on-right" @click="remove(index)">close</i>
     </span>
     <div class="quasar-chips-input chip label text-grey-9">
       <input

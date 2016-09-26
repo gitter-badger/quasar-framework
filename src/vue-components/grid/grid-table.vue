@@ -66,7 +66,7 @@
             :class="{'sortable-column': sortable}"
             style="text-align: left"
           >
-            {{{column.label}}}
+            <span v-html="column.label"></span>
             <i v-show="sortField === column.field && sortOrder === -1">keyboard_arrow_down</i>
             <i v-show="sortField === column.field && sortOrder === 1">keyboard_arrow_up</i>
           </th>

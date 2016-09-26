@@ -33,8 +33,8 @@ class Modal {
     else {
       vm = Utils.extend(true, userVm)
       vm.template = `<div class="modal hidden fullscreen flex items-center justify-center">
-            <div v-el:backdrop class="modal-backdrop backdrop"></div>
-            <div v-el:content class="modal-content">${userVm.template}</div></div>`
+            <div ref="backdrop" class="modal-backdrop backdrop"></div>
+            <div ref="content" class="modal-content">${userVm.template}</div></div>`
 
       // preserve data bindings
       vm.data = userVm.data

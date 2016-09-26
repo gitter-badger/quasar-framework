@@ -83,10 +83,10 @@
           class="quasar-datetime-view-month full-width full-height"
         >
           <button
-            v-for="monthName in monthsList"
+            v-for="(monthName, index) in monthsList"
             class="primary clear full-width"
-            :class="{active: month === $index + 1}"
-            @click="setMonth($index + 1, true)"
+            :class="{active: month === index + 1}"
+            @click="setMonth(index + 1, true)"
           >
             {{ monthName }}
           </button>

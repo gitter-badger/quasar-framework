@@ -11,9 +11,7 @@
         {{ step }}
       </span>
     </div>
-    <div class="timeline-title text-bold">
-      {{{ title }}}
-    </div>
+    <div class="timeline-title text-bold" v-html="title"></div>
     <div
       class="timeline-content"
       v-show="stepper && step === stepper.currentStep"
@@ -82,8 +80,10 @@ export default {
       this.$dispatch('stepper::' + event)
     }
   },
-  ready () {
-    this.__notify('reset')
+  mounted () {
+    this.$nextTick(() => {
+      this.__notify('reset')
+    })
   },
   destroyed () {
     this.__notify('reset')

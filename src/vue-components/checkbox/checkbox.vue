@@ -14,8 +14,7 @@
       },
       disable: {
         type: Boolean,
-        default: false,
-        coerce: Boolean
+        default: false
       }
     },
     computed: {

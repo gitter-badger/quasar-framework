@@ -25,7 +25,8 @@ function show ({
   message = false
 } = {}) {
   if (appIsInProgress) {
-    vm.$data = {spinner, message}
+    vm.spinner = spinner
+    vm.message = message
     return
   }
 
